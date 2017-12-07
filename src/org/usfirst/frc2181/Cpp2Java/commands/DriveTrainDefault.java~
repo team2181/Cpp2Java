@@ -37,7 +37,7 @@ public class DriveTrainDefault extends InstantCommand {
 
     // Called once when this command runs
     protected void initialize() {
-    	Robot.driveTrain.drive(Robot.oi.getdriverJoystick());
+    	Robot.driveTrain.drive(Robot.oi.getDriverJoystick());
     }
 
 }
