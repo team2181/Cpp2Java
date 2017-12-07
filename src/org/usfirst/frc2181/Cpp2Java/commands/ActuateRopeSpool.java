@@ -37,6 +37,14 @@ public class ActuateRopeSpool extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	//SmartDashboard::PutBoolean("test", Robot::oi->getDriverJoystick()->GetRawButton(6));
+    	if(Robot.oi.getDriverJoystick().getRawButton(6)) {
+    		Robot.ropeSpool.setSpinner(1);
+    	} else {
+    		if(Robot.oi.getDriverJoystick().getRawButton(5)) {
+    			Robot.ropeSpool.setSpinner(-1);
+    		}
+    	}
     }
 
     // Called repeatedly when this Command is scheduled to run
@@ -45,7 +53,7 @@ public class ActuateRopeSpool extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+    	return true;
     }
 
     // Called once after isFinished returns true

@@ -37,6 +37,7 @@ public class GearLandingBackward extends InstantCommand {
 
     // Called once when this command runs
     protected void initialize() {
+    	Robot.gearLoader.setGearLoader(-0.5);
     }
 
 }

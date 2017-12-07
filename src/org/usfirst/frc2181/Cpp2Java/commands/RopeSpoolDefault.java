@@ -37,6 +37,7 @@ public class RopeSpoolDefault extends InstantCommand {
 
     // Called once when this command runs
     protected void initialize() {
+    	Robot.ropeSpool.setSpinner(0);
     }
 
 }

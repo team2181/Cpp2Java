@@ -46,6 +46,16 @@ public class RopeSpool extends Subsystem {
 
         // Set the default command for a subsystem here.
         // setDefaultCommand(new MySpecialCommand());
+        //SmartDashboard::PutNumber("RopeSpool max current", 0);
+        //SmartDashboard::PutNumber("Spinner A Current", 0);
+        //SmartDashboard::PutNumber("Spinner B Current", 0);
+    }
+    
+    public void setSpinner(double v) {
+    	//SmartDashboard::PutNumber("Spinner A Current", spinnerA->GetOutputCurrent());
+    	//SmartDashboard::PutNumber("Spinner B Current", spinnerA->GetOutputCurrent());
+    	spinnerA.set(v);
+    	spinnerB.set(v);
     }
 }
 

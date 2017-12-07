@@ -37,6 +37,11 @@ public class GearLoaderDefault extends InstantCommand {
 
     // Called once when this command runs
     protected void initialize() {
+    	Robot.gearLoader.setGearLoader(0);
+    	if (Robot.gearLoader.getLimitSwitch() && (Robot.gearLoader.getPulses() != 0))
+    	{
+    		Robot.gearLoader.reset();
+    	}
     }
 
 }
