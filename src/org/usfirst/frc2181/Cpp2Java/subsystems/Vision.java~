@@ -14,7 +14,7 @@ package org.usfirst.frc2181.Cpp2Java.subsystems;
 import org.usfirst.frc2181.Cpp2Java.RobotMap;
 import org.usfirst.frc2181.Cpp2Java.commands.*;
 import edu.wpi.first.wpilibj.Relay;
-
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 
@@ -44,6 +44,18 @@ public class Vision extends Subsystem {
 
         // Set the default command for a subsystem here.
         // setDefaultCommand(new MySpecialCommand());
+    }
+    
+    public void setHeadlights(boolean state) {
+    	if (state)
+    	{
+    		headlights.set(Relay.Value.kOn);
+    	}
+    	else
+    	{
+    		headlights.set(Relay.Value.kOff);
+    	}
+    	//SmartDashboard.putNumber("headlight status", headlights.get());
     }
 }
 
