@@ -53,7 +53,7 @@ public class DriveCommand extends Command {
     protected void execute() {
     	//double angle = Robot.vision.getGyroAngle();
     	double angle = 0;
-    	Robot.driveTrain.driveAuto(m_strafe, m_speed, m_turn - angle/GYRO_MAX);
+//TAG    	Robot.driveTrain.driveAuto(m_strafe, m_speed, m_turn - angle/GYRO_MAX);
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -63,12 +63,12 @@ public class DriveCommand extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
-    	Robot.driveTrain.driveAuto(0, 0, 0);
+//TAG    	Robot.driveTrain.driveAuto(0, 0, 0);
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
-    	Robot.driveTrain.driveAuto(0, 0, 0);
+//TAG    	Robot.driveTrain.driveAuto(0, 0, 0);
     }
 }
