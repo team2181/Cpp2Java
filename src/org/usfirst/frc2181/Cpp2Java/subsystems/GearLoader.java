@@ -55,9 +55,9 @@ public class GearLoader extends Subsystem {
     
     public void setGearLoader(double v) {
     	landingMotor.set(v);
-    	//SmartDashboard::PutNumber("spinner speed", landingMotor->Get());
-    	//SmartDashboard::PutNumber("spinner pos", position->Get());
-    	//SmartDashboard::PutBoolean("spinner limit-bool", getLimitSwitch());
+    	//SmartDashboard.putNumber("spinner speed", landingMotor.get());
+    	//SmartDashboard.putNumber("spinner pos", position.get());
+    	//SmartDashboard.putBoolean("spinner limit-bool", getLimitSwitch());
     }
     
     public boolean getLimitSwitch() {

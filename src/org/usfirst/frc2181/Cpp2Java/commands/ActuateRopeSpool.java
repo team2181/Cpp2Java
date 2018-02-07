@@ -37,7 +37,7 @@ public class ActuateRopeSpool extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	//SmartDashboard::PutBoolean("test", Robot::oi->getDriverJoystick()->GetRawButton(6));
+    	//SmartDashboard.putBoolean("test", Robot::oi->getDriverJoystick()->GetRawButton(6));
     	if(Robot.oi.getDriverJoystick().getRawButton(6)) {
     		Robot.ropeSpool.setSpinner(1);
     	} else {
